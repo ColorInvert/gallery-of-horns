@@ -1,4 +1,6 @@
-# Lab 1 Code Fellows 301
+# Lab 1 Code Fellows 301, Lab 1 assignment "Horned Beast" which serves as an intro to using React.
+
+## Created by Casey Glidewell, with assistance from instructor Roger Reyes.
 
 
 
