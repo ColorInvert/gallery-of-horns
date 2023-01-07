@@ -11,7 +11,9 @@ class App extends React.Component {
     return (
       <>
         <Header />
-        <Main />
+
+        <Main title={"mainMenu"} imageUrl={"https://img.itch.zone/aW1hZ2UvMjg0NDYwLzEzODYwMjkucG5n/347x500/0mLE8Q.png"} description={"The title screen for Nest Defender The First: The Start Of An Empire"} />
+
         <Footer />
       </>
 
