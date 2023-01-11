@@ -3,6 +3,20 @@
 ## Created by Casey Glidewell, with assistance from instructor Roger Reyes.
 
 
+Number and name of feature: Display Images
+
+Estimate of time needed to complete: 20 minutes
+
+Start time: 7:05
+
+Finish time: 7:13
+
+Actual time needed to complete: 10 minutes
+
+
+
+
+
 
 # Getting Started with Create React App
 
