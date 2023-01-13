@@ -42,7 +42,7 @@ class HornedBeast extends React.Component {
           onClick={this.handleFavorite}
         />
 
-        {this.state.clickedFavorite ? <p>Favorites💕 {this.state.totalFavorites}</p> : <p>Favorites🖤{this.state.totalFavorites}</p>}
+        {this.state.clickedFavorite ? <p>Total Favorites: 💕 {this.state.totalFavorites}</p> : <p>Total Favorites: 🖤{this.state.totalFavorites}</p>}
 
 
       </div>)

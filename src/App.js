@@ -17,12 +17,16 @@ class App extends React.Component {
 
     return (
       <>
+        <Header/>
+        
         {data.map(beasts => <HornedBeast
           title={beasts.title}
           imageUrl={beasts.image_url}
           description={beasts.description}
           key={beasts._id}
         />)}
+      
+        <Footer/>
       </>
 
 
