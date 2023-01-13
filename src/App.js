@@ -5,8 +5,6 @@ import Main from "./Main";
 import Footer from "./Footer";
 import data from "./data.json";
 import HornedBeast from "./HornedBeast";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 
 
 
