@@ -12,6 +12,7 @@ Finish time: 7:13
 
 Actual time needed to complete: 10 minutes
 
+
 Name of feature: Tally favorites
 
 Estimate of time needed to complete: 1 hour
@@ -21,6 +22,28 @@ Start time: 6:30
 Finish time: 8:20
 
 Actual time needed to complete: 1 hour 50 minutes
+
+
+Name of feature: Convert to Cards
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 8:20
+
+Finish time: 9:05
+
+Actual time needed to complete: 45 minutes
+
+
+Name of feature: Layout cards pleasingly, CSS formatting
+
+Estimate of time needed to complete: 2 hours
+
+Start time: ???
+
+Finish time: ???
+
+Actual time needed to complete: ???
 
 # Getting Started with Create React App
 
