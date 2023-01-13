@@ -1,9 +1,8 @@
-# Lab 1 Code Fellows 301, Lab 1 assignment "Horned Beast" which serves as an intro to using React.
+# Lab 1 Code Fellows 301, Lab 1 assignment "Horned Beast" which serves as an intro to using React
 
-## Created by Casey Glidewell, with assistance from instructor Roger Reyes.
+## Created by Casey Glidewell, with assistance from instructor Roger Reyes
 
-
-Number and name of feature: Display Images
+Name of feature: Display Images
 
 Estimate of time needed to complete: 20 minutes
 
@@ -13,10 +12,15 @@ Finish time: 7:13
 
 Actual time needed to complete: 10 minutes
 
+Name of feature: Tally favorites
 
+Estimate of time needed to complete: 1 hour
 
+Start time: 6:30
 
+Finish time: 8:20
 
+Actual time needed to complete: 1 hour 50 minutes
 
 # Getting Started with Create React App
 

@@ -4,37 +4,45 @@ import React from "react";
 
 class HornedBeast extends React.Component {
   constructor(props) {
+    
     super(props)
+
     this.state = {
-      clickedFavorite: false
+
+      clickedFavorite: false,
+
+      totalFavorites: 0
+
     };
   };
 
 
   handleFavorite = () => {
     this.setState({
-      clickedFavorite: this.state.clickedFavorite ? false : true
+
+      clickedFavorite : true, 
+      totalFavorites: this.state.totalFavorites + 1,
+
     })
   }
 
   render() {
     return (
+
       <div className='HornedBeast'>
+
         <h2>{this.props.name}</h2>
-        <p>BLAH: {this.props.horns}</p>
+
+        <p>{this.props.description}</p>
+
         <img
           src={this.props.imageUrl}
           alt={this.props.description}
           height={250}
           onClick={this.handleFavorite}
         />
-        {this.state.clickedFavorite ? <p>Favorited💕</p> : <p>Favorited 🖤</p>}
 
-
-
-
-
-
+        {this.state.clickedFavorite ? <p>Favorites💕 {this.state.totalFavorites}</p> : <p>Favorites🖤{this.state.totalFavorites}</p>}
 
 
       </div>)

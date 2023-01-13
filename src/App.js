@@ -5,6 +5,9 @@ import Main from "./Main";
 import Footer from "./Footer";
 import data from "./data.json";
 import HornedBeast from "./HornedBeast";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+
 
 
 
@@ -14,10 +17,11 @@ class App extends React.Component {
 
     return (
       <>
-        {data.map(beasts => <HornedBeast 
-        title={beasts.title}
-        imageUrl={beasts.image_url}
-        description={beasts.description}
+        {data.map(beasts => <HornedBeast
+          title={beasts.title}
+          imageUrl={beasts.image_url}
+          description={beasts.description}
+          key={beasts._id}
         />)}
       </>
 
