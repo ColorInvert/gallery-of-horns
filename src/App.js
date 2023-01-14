@@ -3,7 +3,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 import data from "./data.json";
 import HornedBeast from "./HornedBeast";
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 //!NOT IN USE
