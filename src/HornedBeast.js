@@ -11,8 +11,7 @@ class HornedBeast extends React.Component {
     this.state = {
 
       clickedFavorite: false,
-
-      totalFavorites: 0
+      totalFavorites: 0,
 
     };
   };
@@ -27,45 +26,58 @@ class HornedBeast extends React.Component {
     })
   }
 
+
+  createModal = () =>{
+    this.props.handleShowModal(this.props.title, this.props.imageUrl, this.props.description);
+  }
+
+
+
   render() {
+
     return (
 
       <div className='HornedBeast'>
-        {/* 
-      //   <h2>{this.props.name}</h2>
-
-      //   <p>{this.props.description}</p>
-
-      //  <img
-      //     src={this.props.imageUrl}
-      //     alt={this.props.description}
-      //     height={250}
-      //     onClick={this.handleFavorite}
-      //   />
-
-      //   {this.state.clickedFavorite ? <p>Total Favorites: 💕 {this.state.totalFavorites}</p> : <p>Total Favorites: 🖤{this.state.totalFavorites}</p>} */}
-
-
-
 
         <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src={this.props.imageUrl} onClick={this.handleFavorite} />
+
+          <Card.Img variant="top" src={this.props.imageUrl} onClick={this.createModal} />
+
           <Card.Body>
-            <Card.Title>{this.props.name}</Card.Title>
+
+            <Card.Title>{this.props.title}</Card.Title>
+
             <Card.Text>
-            {this.props.description}
+
+              {this.props.description}
+
             </Card.Text>
-            <Button variant="primary">
-              
+
+            <Button variant="primary" onClick={this.handleFavorite}>
+
               {this.state.clickedFavorite ? <p>Total Favorites: 💕 {this.state.totalFavorites}</p> : <p>Total Favorites: 🖤{this.state.totalFavorites}</p>}
-              
-              </Button>
+
+            </Button>
+
           </Card.Body>
+
         </Card>
 
       </div>
 
     )
+
+
+
+
+
+
+
+
+
+
+
+    
   }
 }
 
