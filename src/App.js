@@ -3,7 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import data from "./data.json";
 import HornedBeast from "./HornedBeast";
-import Modal from 'react-bootstrap/Modal';
+import SelectedBeast from "./SelectedBeast";
 
 //!NOT IN USE
 //!import Student from "./Student";
@@ -17,8 +17,13 @@ import Modal from 'react-bootstrap/Modal';
 //HornedBeast 3
 //Footer 3
 
+
+
 class App extends React.Component {
 
+
+
+  //!Constructor is only if you need states in this component!
   constructor(props) {
 
     super(props)
@@ -34,10 +39,14 @@ class App extends React.Component {
 
     };
   };
+  //!Constructor is only if you need states in this component!
+
+
+
 
   handleShowModal = (name, image, description) => {
     this.setState({
-      showModal: true,
+      showingModal: true,
       cardName: name,
       cardImage: image,
       cardDescription: description
@@ -46,7 +55,7 @@ class App extends React.Component {
 
   handleCloseModal = () => {
     this.setState({
-      showModal: false
+      showingModal: false
     })
   }
 
@@ -72,27 +81,13 @@ class App extends React.Component {
 
         )}
 
-        <Modal
-
-          show={this.state.showModal}
-
-          onHide={this.handleCloseModal}>
-
-          <Modal.Header closeButton>
-
-            <Modal.Title>{this.state.cardName}</Modal.Title>
-
-          </Modal.Header>
-
-          <Modal.Body>
-
-            <img src={this.state.cardImage} alt={this.state.cardDescription} height={300} />
-
-            {this.state.cardDescription}
-
-          </Modal.Body>
-
-        </Modal>
+        <SelectedBeast
+          handleCloseModal={this.handleCloseModal}
+          title={this.state.cardName}
+          imageUrl={this.state.cardImage}
+          description={this.state.cardDescription}
+          showingModal={this.state.showingModal}
+        />
 
         <Footer />
 
