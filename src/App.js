@@ -1,4 +1,5 @@
 import React from "react";
+import Form from 'react-bootstrap/Form';
 import Header from "./Header";
 import Footer from "./Footer";
 import data from "./data.json";
@@ -59,6 +60,21 @@ class App extends React.Component {
     })
   }
 
+  handleFilterChange = (e) => {
+
+    console.log(e.target.value)
+
+
+
+
+    var hornCountWanted = e.target.value
+    //var hornCountActual = data
+
+
+    return (data.filter(item => item.horns === hornCountWanted))
+
+  }
+
 
 
 
@@ -68,6 +84,18 @@ class App extends React.Component {
     return (
       <>
         <Header />
+
+        <Form>
+          <Form.Label> Filter by number of horns:</Form.Label>
+          <Form.Control as="select" onChange={this.handleFilterChange}>
+            <option value={0} >Show All</option>
+            <option value={1}>One</option>
+            <option value={2}>Two</option>
+            <option value={3}>Three</option>
+            <option value={4}>Four</option>
+            <option value={100}>One Hundred or More</option>
+          </Form.Control>
+        </Form>
 
         {data.map(beasts => <HornedBeast
 
@@ -82,17 +110,18 @@ class App extends React.Component {
         )}
 
         <SelectedBeast
+
           handleCloseModal={this.handleCloseModal}
           title={this.state.cardName}
           imageUrl={this.state.cardImage}
           description={this.state.cardDescription}
           showingModal={this.state.showingModal}
+
         />
 
         <Footer />
 
       </>
-
 
     )
   }
