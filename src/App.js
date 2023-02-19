@@ -37,7 +37,7 @@ class App extends React.Component {
       cardDescription: '',
       cardImage: '',
       totalFavorites: 0,
-
+      currentBeasts: data
     };
   };
   //!Constructor is only if you need states in this component!
@@ -67,11 +67,17 @@ class App extends React.Component {
 
 
 
-    var hornCountWanted = e.target.value
+    var hornCountWanted = Number(e.target.value)
+    console.log(typeof(hornCountWanted));
     //var hornCountActual = data
 
+    console.log(`current desired horncount is ${hornCountWanted}`)
 
-    return (data.filter(item => item.horns === hornCountWanted))
+
+   var filtered = data.filter(item => item.horns === hornCountWanted || hornCountWanted === 0)
+
+
+    this.setState({currentBeasts: filtered})
 
   }
 
@@ -97,12 +103,13 @@ class App extends React.Component {
           </Form.Control>
         </Form>
 
-        {data.map(beasts => <HornedBeast
+        {this.state.currentBeasts.map(beasts => <HornedBeast
 
           title={beasts.title}
           imageUrl={beasts.image_url}
           description={beasts.description}
           key={beasts._id}
+          horns={beasts.horns}
           handleShowModal={this.handleShowModal}
 
         />
